@@ -1,0 +1,13 @@
+.header {
+  width: 100%;
+  box-shadow: -0px -5px 60px 0 fade-out(#1a1c3d, 0.65);
+  padding: 22px 0;
+  background-color: #2e3161;
+
+  .logo {
+    @extend %logos;
+    width: 149px;
+  	height: 35px;
+  	background-position: 0 -25px;
+  }
+}

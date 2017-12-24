@@ -1,0 +1,151 @@
+$control-x-padding: 16px;
+
+%control {
+  display: block;
+  width: 100%;
+  transition: 0.3s box-shadow;
+  margin-bottom: 10px;
+  outline: none;
+  border-radius: 3px;
+  border: solid 1px #686ba2;
+  background-color: transparent;
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+
+  &:focus {
+    box-shadow: 0 0 15px 0 fade-out(#6878ed, 0.65);
+  }
+}
+
+.control {
+  margin-bottom: 35px;
+}
+
+.list {
+  overflow-y: scroll;
+  height: 160px;
+  margin-bottom: 10px;
+  border: solid 1px #686ba2;
+  border-radius: 3px;
+
+  &-i {
+    cursor: pointer;
+    transition: 0.3s background-color;
+    padding: 12px $control-x-padding;
+    color: #fff;
+    font-size: 14px;
+
+    &_select {
+      cursor: default;
+      background-color: #6878ed;
+    }
+  }
+
+  &-buttons {
+    margin: 20px 0;
+    text-align: center;
+  }
+}
+
+.label {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #686ba2;
+  line-height: 20px;
+  font-size: 13px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.select {
+  @extend %control;
+  cursor: pointer;
+  appearance: none;
+  height: 40px;
+  padding: 0 (($control-x-padding * 2) + 8) 0 $control-x-padding;
+  background-image: url(../images/select.svg);
+  background-repeat: no-repeat;
+  background-position: right $control-x-padding center;
+  background-size: 8px 4px;
+}
+
+.input,
+.textarea {
+  @extend %control;
+  padding-left: $control-x-padding;
+  padding-right: $control-x-padding;
+}
+
+.input {
+  height: 40px;
+
+  $this: &;
+
+  &-container {
+    position: relative;
+
+    #{$this} {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  &-hint {
+    position: absolute;
+    z-index: 1;
+    right: $control-x-padding;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.textarea {
+  resize: none;
+  height: 80px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 3px;
+  border: none;
+  padding: 0 15px;
+  background-color: #6878ed;
+  color: #fff;
+  line-height: 40px;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+
+  &_done,
+  &_setup {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  &_done {
+    cursor: default;
+    text-align: center;
+    background-color: #45c06e;
+  }
+
+  &_arrow {
+    width: 40px;
+    height: 40px;
+    margin: 0 8px;
+    background-size: 14px 18px;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &_up {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAkCAMAAACt+qpmAAAAOVBMVEX///////////////////////////////////////////////////////////////////////////+0EB4eAAAAEnRSTlMAQ0RKWGRldHmEhdff5Obn8v6xVuI3AAAAb0lEQVR42u3SSxJAMBBF0ecbxCfsf7GkInWVLjbAHbwenGnrmgvB6aF+O+pfDLWGWkOtodbWPCjWxm2TGlM8uulwWkL0ahlRDEQ7LCHaKURrBKJBczIQnVX6sZZF1aMvlAPpx49i/KflEatlqiTaATtlEsRji5X2AAAAAElFTkSuQmCC);
+  }
+
+  &_down {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAkCAMAAACt+qpmAAAAOVBMVEX///////////////////////////////////////////////////////////////////////////+0EB4eAAAAEnRSTlMAQ0lYZGV1dnl7hYbX3+by8/6pgGP5AAAAcUlEQVR4Ae3JSRaCQBAE0WRwEKGAvP9hVSwNtV+fQGIRm6/P2ohWtcKOKvrejv+KzTh1INhNY6Ow177Ew2qHZqcmYp51MZqY5rN0RV/YbzZI6Bsx9IlYNqRu+G3o4z+G5jCUMLQ0tGJoaWhpdFyWk0g3ONYSu6bWPbkAAAAASUVORK5CYII=);
+  }
+}

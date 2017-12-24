@@ -1,0 +1,104 @@
+.setup {
+  display: flex;
+  margin: 35px 0;
+
+  @media screen and (max-width: $tablet-width) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: $mobile-width) {
+    margin: 20px 0;
+  }
+
+  &-i {
+    position: relative;
+    width: 33.333%;
+    padding: 220px 3% 0;
+
+    @media screen and (max-width: $tablet-width) {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &:not(:last-child) {
+      border-right: 1px dashed fade-out(#686ba2, 0.6);
+
+      @media screen and (max-width: $tablet-width) {
+        border-right: none;
+        border-bottom: 1px dashed fade-out(#686ba2, 0.6);
+      }
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+    }
+
+    &_disable {
+      position: relative;
+
+      &:before {
+        opacity: 0.5;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+
+      .control {
+        opacity: 0.5;
+      }
+    }
+
+    &_network {
+      &:before {
+        @include image-2x('../images/setup/network@2x.png');
+        top: 32px;
+        width: 206px;
+        height: 163px;
+        background-image: url(../images/setup/network.png);
+      }
+
+      &:first-child {
+        &:before {
+          left: 50%;
+          transform: translateX(-53%);
+        }
+      }
+
+      &:last-child {
+        &:before {
+          right: 50%;
+          transform: translateX(53%);
+        }
+      }
+    }
+
+    &_bridge {
+      &:before {
+        @include image-2x('../images/setup/bridge@2x.png');
+        left: 50%;
+        top: 35px;
+        transform: translateX(-50%);
+        width: 228px;
+        height: 176px;
+        background-image: url(../images/setup/bridge.png);
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.footer {
+  padding: 18px 0;
+  box-shadow: -0px -5px 20px 0 fade-out(#2f5580, 0.9);
+  background-color: #2e3161;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    @extend %logos;
+    order: 0;
+    left: 0;
+    width: 100px;
+  	height: 25px;
+  	background-position: 0 0;
+  }
+
+  .rights {
+    order: 1;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+
+    @media screen and (max-width: $tablet-width) {
+      order: 2;
+      width: 100%;
+      margin-top: 15px;
+      line-height: normal;
+    }
+  }
+
+  .socials {
+    order: 2;
+
+    @media screen and (max-width: $tablet-width) {
+      order: 1;
+    }
+  }
+}

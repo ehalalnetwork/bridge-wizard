@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/stylesheets/application.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="#" class="logo"></a>
+    </div>
+  </header>
+  <section class="container content">
+    <h1 class="title">Step 2</h1>
+    <p class="description">Bridge and contracts setup</p>
+    <div class="setup">
+      <div class="setup-i setup-i_network">
+        <div class="control">
+          <label for="" class="label">Token Contract</label>
+          <textarea class="textarea"></textarea>
+          <p>Specify token contract on the left side of the bridge</p>
+        </div>
+      </div>
+      <div class="setup-i setup-i_bridge">
+        <div class="control">
+          <label for="" class="label">Authorities</label>
+          <div class="list">
+            <div class="list-i">Roman Storm</div>
+            <div class="list-i list-i_select">John LeGassic</div>
+            <div class="list-i">Jeff Flowers</div>
+            <div class="list-i">Rocco Mancini</div>
+            <div class="list-i">Jeff Flowers</div>
+            <div class="list-i">Rocco Mancini</div>
+            <div class="list-i">Walter Karshat</div>
+          </div>
+          <div class="list-buttons">
+            <button type="button" class="button button_arrow button_up"></button>
+            <button type="button" class="button button_arrow button_down"></button>
+          </div>
+          <div class="list">
+            <div class="list-i">Alexandra Kramer</div>
+          </div>
+          <p>Select subset of authorities who will be accepted on right side of the bridge</p>
+        </div>
+        <div class="control">
+          <label for="" class="label">Strategy</label>
+          <div class="input-container">
+            <input type="text" class="input">
+            <p class="input-hint description">Max: 2</p>
+          </div>
+          <p>Specify the multisig strategy to unlock the token on the right side of the bridge (e.g. only 1 of 2 is required to unlock the token)</p>
+        </div>
+        <div class="control">
+          <label for="" class="label">Daily Limit</label>
+          <div class="input-container">
+            <input type="text" class="input">
+            <p class="input-hint description">Tokens</p>
+          </div>
+          <p>Specify a daily limit of token to protect a builder of the bridge from malicious authorities</p>
+        </div>
+        <div class="control">
+          <label for="" class="label">Fee</label>
+          <div class="input-container">
+            <input type="text" class="input">
+            <p class="input-hint description">ETH</p>
+          </div>
+          <p>Decide on  how much each validator will get for each transaction over the bridge</p>
+        </div>
+      </div>
+      <div class="setup-i setup-i_network">
+        <div class="control">
+          <label for="" class="label">Name</label>
+          <input type="text" class="input">
+          <p>The name of your token. Will be used by Etherscan and other token browsers</p>
+        </div>
+        <div class="control">
+          <label for="" class="label">Ticker</label>
+          <input type="text" class="input">
+          <p>he three letter ticker for your token. There are 17,576 combinations for 26 english letters</p>
+        </div>
+        <div class="control">
+          <label for="" class="label">Decimals</label>
+          <input type="text" class="input">
+          <p>Refers to how divisible a token can be, from 0 (not at all divisible) to 18 (pretty much continuous)</p>
+        </div>
+        <div class="control">
+          <label for="" class="label">Amount</label>
+          <input type="text" class="input">
+          <p>How many tokens will be created for the bridge</p>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="button">Continue</a>
+    <p class="next-step-description">
+      <span>Next Step</span>
+      Bridge and contacts deployment
+    </p>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <p class="rights">2018 Oracles Network. All rights reserved.</p>
+      <a href="#" class="logo"></a>
+      <div class="socials">
+        <a href="#" class="social social_reddit"></a>
+        <a href="#" class="social social_twitter"></a>
+        <a href="#" class="social social_oracles"></a>
+        <a href="#" class="social social_telegram"></a>
+        <a href="#" class="social social_github"></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
